@@ -34,8 +34,15 @@ const d = document,
 ($template = d.querySelector("template").content),
   ($fragment = d.createDocumentFragment());
 
-/* w.localStorage.setItem("usersList", JSON.stringify(usersList)); */
-let localUsers = JSON.parse(w.localStorage.getItem("usersList"));
+/* Cargamos los usuarios una unica vez en el localStorage */
+d.addEventListener("mousemove", stopEvent);
+function stopEvent(e) {
+  e.target.removeEventListener(e.type, stopEvent);
+  w.localStorage.setItem("usersList", JSON.stringify(usersList));
+}
+
+let localUsers = JSON.parse(w.localStorage.getItem(`usersList`));
+console.log(localUsers);
 
 //Read-GET
 const readUsers = () => {
