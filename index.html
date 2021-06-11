@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/crud-usuarios.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Changa:wght@300;400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <title>CRUD Usuarios</title>
+</head>
+
+<body>
+  <div class="container-crud">
+    <!-- Header -->
+    <header class="header-crud">
+      <figure><img src="https://image.flaticon.com/icons/png/512/4887/4887374.png" alt=""></figure>
+      <h1>CRUD Usuarios</h1>
+    </header>
+    <main>
+      <!-- Aside-form -->
+      <aside class="editor-container">
+        <article class="editor-title">
+          <h2>Nuevo Usuario</h2>
+        </article>
+        <form action="" class="editor-form">
+          <label for="name">Nombre:</label>
+          <input type="text" name="name" id="input-name" required></input>
+          <label for="last-name">Apellido:</label>
+          <input type="text" name="lastName" id="input-last-name" required></input>
+          <label for="email">Correo Electronico:</label>
+          <input type="email" name="email" id="input-email" required></input>
+          <input type="submit" id="add-btn" value="Agregar usuario">
+          <input type="hidden" name="inputId">
+        </form>
+      </aside>
+      <!-- Table -->
+      <section class="table">
+        <div class="thead">
+          <span>Nombre Completo</span>
+          <span>Email</span>
+          <span>Edición</span>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Template -->
+  <template>
+    <div class="trow">
+      <span class="complete-name"></span>
+      <span class="email"></span>
+      <span class="action-btns">
+        <button class="edit-btn">
+          <i class="fas fa-pen-square"></i>
+        </button>
+        <button class="delete-btn">
+          <i class="fas fa-times-circle"></i>
+        </button>
+      </span>
+    </div>
+  </template>
+
+  <script src="https://kit.fontawesome.com/ed8e03132d.js" crossorigin="anonymous"></script>
+  <script src="./script/crud-usuarios.js"></script>
+</body>
+
+</html>
