@@ -34,7 +34,7 @@ const d = document,
 ($template = d.querySelector("template").content),
   ($fragment = d.createDocumentFragment());
 
-/* w.localStorage.setItem("usersList", JSON.stringify(usersList)); */
+ w.localStorage.setItem("usersList", JSON.stringify(usersList)); 
 let localUsers = JSON.parse(w.localStorage.getItem("usersList"));
 
 //Read-GET
